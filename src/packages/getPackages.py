@@ -2,6 +2,7 @@
 import os
 import re
 import json
+import configUtils
 
 bashHistory = os.path.expanduser("~/.bash_history")
 f = open(bashHistory, "r")
@@ -16,4 +17,11 @@ def extractProgramName(command):
 programs = [extractProgramName(line) for line in commands if "apt install" in line]
 
 print(programs)
-jsonList = json.dumps(programs)
+config = { 'programs': programs}
+print(config)
+configUtils.saveConfig(config)
+#jsonList = json.dumps(programs)
+#
+#fOut = open("config.json", "w")
+#fOut.write(jsonList)
+#fOut.close()
