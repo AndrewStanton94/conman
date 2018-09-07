@@ -2,4 +2,7 @@
 
 import packageManagers.apt
 
-__all__ = ['activeShells']
+allPackageMangers = [apt]
+activePackageManagers = allPackageMangers
+# Filter this list
+__all__ = ['activePackageManagers']
