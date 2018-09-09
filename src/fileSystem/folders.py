@@ -17,3 +17,16 @@ def makeStructure(structure, start):
             with open(path + "/install.json", 'w') as f:
                 json.dump(structure[item], f, ensure_ascii=False)
 
+
+def jsonFromFiles(start = '~/conman/config/'):
+    masterPath = []
+    mypath = os.path.expanduser(start)
+    for (dirpath, dirnames, filenames) in os.walk(mypath):
+        print(dirpath, dirnames, filenames)
+        fullPaths = [dirpath + '/' + filename for filename in filenames]
+        masterPath.extend(fullPaths)
+    print('masterPath', masterPath)
+    for path in masterPath:
+        with open(path, 'r') as f:
+            d = json.load(f)
+            print(d)

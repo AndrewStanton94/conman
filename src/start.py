@@ -16,4 +16,9 @@ def findLocalPackages():
 
     folders.makeStructure(sortedPackages, 'pm/')
 
-findLocalPackages()
+#findLocalPackages()
+
+def installPackages():
+    config = folders.jsonFromFiles()
+
+installPackages()
