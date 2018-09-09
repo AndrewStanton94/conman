@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 
-from shells import *
+from shells import historyBuiltin
 from packageManagers import *
 from packageManagement import getPackages
 
-print(getPackages.get(activeShells, activePackageManagers))
+packages = getPackages.get(historyBuiltin.getHistory(), activePackageManagers)
+print(packages)
+
+categories = ['std', 'dev', 'machine', 'se']
+
+sortedPackages = getPackages.categoriseApps(packages, categories)
+#print(sortedPackages)
