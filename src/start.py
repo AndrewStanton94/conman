@@ -3,11 +3,17 @@
 from shells import historyBuiltin
 from packageManagers import *
 from packageManagement import getPackages
+from fileSystem import folders
 
-packages = getPackages.get(historyBuiltin.getHistory(), activePackageManagers)
-print(packages)
+def findLocalPackages():
+    packages = getPackages.get(historyBuiltin.getHistory(), activePackageManagers)
+    print(packages)
 
-categories = ['std', 'dev', 'machine', 'se']
+    categories = ['std', 'dev', 'machine']
 
-sortedPackages = getPackages.categoriseApps(packages, categories)
-#print(sortedPackages)
+    sortedPackages = getPackages.categoriseApps(packages, categories)
+    print(sortedPackages)
+
+    folders.makeStructure(sortedPackages, 'pm/')
+
+findLocalPackages()

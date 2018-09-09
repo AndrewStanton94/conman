@@ -47,9 +47,10 @@ def sortAppsForPM(apps, categories):
         selectedCategory = getValidCategory(categories, app)
         categorisedApps[selectedCategory].append(app)
         os.system('clear')
-    print(categorisedApps)
+    return categorisedApps
 
 def categoriseApps(appsByPM, categories):
     for pm in appsByPM:
         print('PM:', pm)
         appsByPM[pm] = sortAppsForPM(appsByPM[pm], categories)
+    return appsByPM
