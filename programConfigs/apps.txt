@@ -1,0 +1,22 @@
+yakuake
+neovim
+ctags
+curl
+zsh
+git
+
+# used with i3
+arandr		To edit monitor layout
+lxappearance	Theme selector
+compton		Compositor
+rofi		Better launcher
+i3blocks	Better status
+feh		Desktop Background
+scrot		Screenshot
+xautolock	Lock automatically
+pcmanfm		Doesn't break colorscheme
+vifm		Terminal vi inspired filemanager
+numlockx	Control numlock state
+
+fonts-powerline	Fonts patched for terminal themes
+https://github.com/ryanoasis/nerd-fonts.git

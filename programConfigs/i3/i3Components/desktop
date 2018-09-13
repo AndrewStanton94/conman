@@ -1,0 +1,36 @@
+# Alias's for workspaces
+set $workspace1 "1: web "
+set $workspace2 "2: terminal "
+set $workspace3 "3:"
+set $workspace4 "4:"
+set $workspace5 "5:"
+set $workspace6 "6:"
+set $workspace7 "7:"
+set $workspace8 "8: msg "
+set $workspace9 "9: Video "
+set $workspace10 "10: music "
+
+# Primary monitor is workspace1
+set $mainMonitor "DVI-I-1"
+set $secondaryMonitor "VGA-0"
+
+set $browser "firefox"
+
+# This keeps the screens in the right layout
+# Install and use arandr to get the command below
+exec_always xrandr --output VGA-0 --mode 1280x1024 --pos 0x56 --rotate normal --output DVI-I-1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off
+
+exec_always feh --bg-scale ~/Pictures/Talisker-Made-by-the-Sea-Race-to-Skye-WEB-SOCIAL.jpg
+
+# Default workspaces
+assign [class="Firefox"] $workspace1
+assign [class="Gnome-terminal"] $workspace2
+# https://www.reddit.com/r/i3wm/comments/52dy4m/spotify_doesnt_start_at_assigned_workspace/
+for_window [title="Slack|Messenger|Google Hangouts"] move to workspace $workspace8
+for_window [title="Netflix|YouTube"] move to workspace $workspace9
+for_window [class="Spotify"] move to workspace $workspace10
+
+workspace $workspace1 output $mainMonitor
+workspace $workspace8 output $mainMonitor
+workspace $workspace9 output $mainMonitor
+workspace $workspace2 output $secondaryMonitor

@@ -1,0 +1,18 @@
+#Variables
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 11
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+font pango:DejaVu Sans Mono 11
+
+#http://www.color-hex.com/color-palette/13442
+set $bg-color 	         #6a2162
+set $inactive-bg-color   #2f343f
+set $text-color          #767676
+set $inactive-text-color #9a3b91
+set $urgent-bg-color     #E53935
+

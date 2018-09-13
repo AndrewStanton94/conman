@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cat > config << EOF
+	$(cat ./i3Components/00Intro)
+	$(cat ./i3Components/01Variables)
+	$(cat ./i3Components/02Keybindings)
+	$(cat ./i3Components/03Exec)
+	$(cat ./i3Components/04Workspaces)
+
+	#DESKTOP Config
+	$(cat ./i3Components/desktop)
+	#PORT LAPTOP Config
+	$(cat ./i3Components/port.laptop)
+EOF
+
+# ln -s config ~/.config/i3/config
+cp config ~/.config/i3/config

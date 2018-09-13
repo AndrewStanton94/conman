@@ -1,0 +1,13 @@
+/home/andrew/.oh-my-zsh/themes/mikeh.zsh-theme
+/home/andrew/.oh-my-zsh/themes/duellj.zsh-theme
+/home/andrew/.oh-my-zsh/themes/rkj-repos.zsh-theme
+/home/andrew/.oh-my-zsh/themes/jonathan.zsh-theme
+/home/andrew/.oh-my-zsh/themes/tjkirch_mod.zsh-theme
+/home/andrew/.oh-my-zsh/themes/dogenpunk.zsh-theme
+/home/andrew/.oh-my-zsh/themes/adben.zsh-theme
+/home/andrew/.oh-my-zsh/themes/agnoster.zsh-theme
+/home/andrew/.oh-my-zsh/themes/trapd00r.zsh-theme
+/home/andrew/.oh-my-zsh/themes/xiong-chiamiov-plus.zsh-theme
+/home/andrew/.oh-my-zsh/themes/fino-time.zsh-theme
+/home/andrew/.oh-my-zsh/themes/duellj.zsh-theme
+/home/andrew/.oh-my-zsh/themes/mira.zsh-theme

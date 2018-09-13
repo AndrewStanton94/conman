@@ -1,0 +1,3 @@
+/home/andrew/.oh-my-zsh/themes/blinks.zsh-theme
+/home/andrew/.oh-my-zsh/themes/dallas.zsh-theme
+/home/andrew/.oh-my-zsh/themes/candy-kingdom.zsh-theme
