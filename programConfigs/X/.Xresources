@@ -1,0 +1,13 @@
+! cursor
+Xcursor.theme: Breeze-Hacked
+
+! Font
+URxvt.font: xft:monaco:size=16
+URxvt.letterSpace: -4
+
+! Color
+!*background: #9a3b91
+*background: #6a2162
+*foreground: #ccc
+
+URxvt*scrollBar: false
