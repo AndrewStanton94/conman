@@ -16,3 +16,4 @@ set $text-color          #767676
 set $inactive-text-color #9a3b91
 set $urgent-bg-color     #E53935
 
+set $terminal urxvtcd

@@ -28,9 +28,3 @@ assign [class="Gnome-terminal"] $workspace2
 # https://www.reddit.com/r/i3wm/comments/52dy4m/spotify_doesnt_start_at_assigned_workspace/
 for_window [title="Slack|Messenger|Google Hangouts"] move to workspace $workspace8
 for_window [title="Netflix|YouTube"] move to workspace $workspace9
-for_window [class="Spotify"] move to workspace $workspace10
-
-workspace $workspace1 output $mainMonitor
-workspace $workspace8 output $mainMonitor
-workspace $workspace9 output $mainMonitor
-workspace $workspace2 output $secondaryMonitor
