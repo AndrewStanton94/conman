@@ -30,7 +30,10 @@ alert = #bd2c40
 
 [bar/bar1]
 ;monitor = ${env:MONITOR:HDMI-1}
-monitor = DP-1-3
+; Main monitor
+;monitor = DP-1-3
+;Laptop screen
+monitor = eDP-1
 width = 100%
 height = 35
 radius = 6.0
@@ -66,12 +69,12 @@ font-3 = unifont:pixelsize=13
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan memory cpu battery date
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan memory cpu battery date
+modules-right = filesystem xbacklight xkeyboard wlan memory cpu battery date
 
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
-;tray-background = #0063ff
 
 ;wm-restack = i3
 
@@ -83,6 +86,63 @@ tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[bar/bar2]
+;monitor = ${env:MONITOR:HDMI-1}
+; Main monitor
+monitor = DP-1-3
+;Laptop screen
+;monitor = eDP-1
+width = 100%
+height = 35
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+; Underlines
+line-size = 4
+line-color = #f00
+
+border-size = 8
+border-color = #00000000
+
+; start and end of the bar
+padding-left = 0
+padding-right = 3
+
+; between modules
+module-margin-left = 1
+module-margin-right = 1
+
+;font-0 = fixed:pixelsize=10;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-2 = siji:pixelsize=10;1
+
+;font-0 = roboto:pixelsize=13
+font-0 = "Ubuntu Mono Regular:pixelsize=14"
+font-1 = dejavusans:pixelsize=13
+font-2 = fontawesome:pixelsize=13
+font-3 = unifont:pixelsize=13
+
+modules-left = i3
+modules-center = xwindow
+;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan memory cpu battery date
+modules-right = filesystem xbacklight xkeyboard wlan memory cpu battery date
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:50:...%
@@ -145,6 +205,7 @@ label-urgent-padding = 10
 ; Separator in between workspaces
 label-separator = |
 
+pin-workspaces = true
 
 ;[module/mpd]
 ;type = internal/mpd
