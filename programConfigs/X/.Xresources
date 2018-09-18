@@ -6,8 +6,71 @@ URxvt.font: xft:monaco:size=16
 URxvt.letterSpace: -4
 
 ! Color
-!*background: #9a3b91
-*background: #6a2162
-*foreground: #ccc
+urxvt*depth: 32
+urxvt*background: rgba:6a00/2100/6200/c800
+!*foreground: #ccc
 
 URxvt*scrollBar: false
+
+! pasted from https://wiki.mpich.org/mpich/index.php/Configure_xterm_Fonts_and_Colors_for_Your_Eyeball
+xterm*vt100*geometry: 80x60
+xterm*saveLines: 16384
+xterm*loginShell: true
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*termName: xterm-color
+xterm*eightBitInput: false
+
+!BLK Cursor
+#define _color0        #000d18
+#define _color8        #000d18
+!RED Tag
+#define _color1        #e89393
+#define _color9        #e89393
+!GRN SpecialKey
+#define _color2        #9ece9e
+#define _color10       #9ece9e
+!YEL Keyword
+#define _color3        #f0dfaf
+#define _color11       #f0dfaf
+!BLU Number
+#define _color4        #8cd0d3
+#define _color12       #8cd0d3
+!MAG Precondit
+#define _color5        #c0bed1
+#define _color13       #c0bed1
+!CYN Float
+#define _color6        #dfaf8f
+#define _color14       #dfaf8f
+!WHT Search
+#define _color7        #efefef
+#define _color15       #efefef
+!FMT Include, StatusLine, ErrorMsg
+#define _colorBD       #ffcfaf
+#define _colorUL       #ccdc90
+#define _colorIT       #80d4aa
+!TXT Normal, Normal, Cursor
+#define _foreground    #dcdccc
+#define _background    #1f1f1f
+#define _cursorColor   #8faf9f
+URxvt*color0         : _color0
+URxvt*color1         : _color1
+URxvt*color2         : _color2
+URxvt*color3         : _color3
+URxvt*color4         : _color4
+URxvt*color5         : _color5
+URxvt*color6         : _color6
+URxvt*color7         : _color7
+URxvt*color8         : _color8
+URxvt*color9         : _color9
+URxvt*color10        : _color10
+URxvt*color11        : _color11
+URxvt*color12        : _color12
+URxvt*color13        : _color13
+URxvt*color14        : _color14
+URxvt*color15        : _color15
+URxvt*colorBD        : _colorBD
+URxvt*colorIT        : _colorIT
+URxvt*colorUL        : _colorUL
+URxvt*foreground     : _foreground
+URxvt*background     : _background
+URxvt*cursorColor    : _cursorColor
