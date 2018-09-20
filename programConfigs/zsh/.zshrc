@@ -96,3 +96,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
