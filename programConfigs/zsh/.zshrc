@@ -97,3 +97,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
+
+export PATH="${PATH}:${HOME}/.local/bin/"
