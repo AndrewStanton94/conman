@@ -1,0 +1,1 @@
+/home/andrew/conman/programConfigs/vim/.vimrc
