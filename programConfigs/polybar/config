@@ -17,16 +17,19 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #6a2162
+background = ${xrdb:color2:#6a2162}
 background-alt = #9a3b91
-;foreground = ${xrdb:color7:#222}
-;foreground = #767676
-foreground = #ccc
-foreground-alt = #555
+foreground = ${xrdb:color7:#ccc}
+foreground-alt = ${xrdb:color8:#555}
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+
+;[colors]
+;foreground-alt = ${xrdb:color7:#222}
+;primary = ${xrdb:color1:#222}
+;secondary = ${xrdb:color2:#222}
+;alert = ${xrdb:color3:#222}
 
 [bars]
 width = 100%
