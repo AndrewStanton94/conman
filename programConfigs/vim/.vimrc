@@ -13,12 +13,16 @@ nnoremap j gj
 " https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+" Web plugins
+Plug 'ap/vim-css-color'
+Plug 'othree/javascript-libraries-syntax.vim'
+" Typescript
 Plug 'HerringtonDarkholme/yats'
 
-Plug 'ap/vim-css-color'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'othree/javascript-libraries-syntax.vim'
 
 " auto complete
 Plug 'honza/vim-snippets'
