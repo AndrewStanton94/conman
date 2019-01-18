@@ -2,6 +2,8 @@ set number
 set tabstop=4
 
 nnoremap <leader>p "+p
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
 nnoremap <leader>d "+dap
 
 nnoremap k gk
@@ -61,7 +63,7 @@ syntax enable                " enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4    " number of spaces to use for autoindent
-set expandtab       " tabs are space
+set noexpandtab     " tabs are space
 set autoindent
 set copyindent      " copy indent from the previous line
 " }}} Spaces & Tabs
@@ -71,6 +73,11 @@ set hidden
 set number                   " show line number
 set showcmd                  " show command in bottom bar
 set cursorline               " highlight current line
+
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:_,nbsp:☠
+set list
+
 set wildmenu                 " visual autocomplete for command menu
 set showmatch                " highlight matching brace
 set laststatus=2             " window will always have a status line
