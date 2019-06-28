@@ -68,6 +68,7 @@ plugins=(
   last-working-dir
   lol
   sudo
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
