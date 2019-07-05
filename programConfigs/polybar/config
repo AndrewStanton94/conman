@@ -52,10 +52,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
-; Main monitor
-;monitor = DP-1-3
-;Laptop screen
+; Left monitor
 monitor = eDP-1
 width = ${bars.width}
 height = ${bars.height}
@@ -79,11 +76,7 @@ padding-right = ${bars.padding-right}
 module-margin-left = ${bars.module-margin-left}
 module-margin-right = ${bars.module-margin-right}
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
 
-;font-0 = roboto:pixelsize=13
 font-0 = "Ubuntu Mono Regular:pixelsize=14"
 font-1 = dejavusans:pixelsize=13
 font-2 = fontawesome:pixelsize=13
@@ -91,15 +84,10 @@ font-3 = unifont:pixelsize=13
 
 modules-left = i3
 modules-center = xwindow
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard wlan memory cpu battery date
-modules-right = filesystem xbacklight pulseaudio xkeyboard wlan memory cpu battery date
+modules-right = filesystem xbacklight pulseaudio xkeyboard wlan eth memory cpu battery date
 
 tray-position = right
 tray-padding = 2
-
-;wm-restack = i3
-
-;override-redirect = true
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -108,11 +96,8 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/bar2]
-;monitor = ${env:MONITOR:HDMI-1}
-; Main monitor
-monitor = DP-1-3
 ;Laptop screen
-;monitor = eDP-1
+monitor = DP-1-3
 width = ${bars.width}
 height = ${bars.height}
 radius = ${bars.radius}
@@ -135,11 +120,6 @@ padding-right = ${bars.padding-right}
 module-margin-left = ${bars.module-margin-left}
 module-margin-right = ${bars.module-margin-right}
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-
-;font-0 = roboto:pixelsize=13
 font-0 = "Ubuntu Mono Regular:pixelsize=14"
 font-1 = dejavusans:pixelsize=13
 font-2 = fontawesome:pixelsize=13
@@ -153,10 +133,6 @@ modules-right = filesystem xbacklight xkeyboard wlan memory cpu battery date
 tray-position = right
 tray-padding = 2
 
-;wm-restack = i3
-
-;override-redirect = true
-
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -165,10 +141,7 @@ cursor-scroll = ns-resize
 
 
 [bar/bar3]
-;monitor = ${env:MONITOR:HDMI-1}
-; Main monitor
-;monitor = DP-1-3
-;Laptop screen
+; Right screen
 monitor = HDMI-2
 width = ${bars.width}
 height = ${bars.height}
@@ -192,11 +165,6 @@ padding-right = ${bars.padding-right}
 module-margin-left = ${bars.module-margin-left}
 module-margin-right = ${bars.module-margin-right}
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-
-;font-0 = roboto:pixelsize=13
 font-0 = "Ubuntu Mono Regular:pixelsize=14"
 font-1 = dejavusans:pixelsize=13
 font-2 = fontawesome:pixelsize=13
@@ -210,10 +178,6 @@ modules-right = filesystem xbacklight pulseaudio xkeyboard wlan memory cpu batte
 tray-position = right
 tray-padding = 2
 
-;wm-restack = i3
-
-;override-redirect = true
-
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -222,7 +186,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:50:...%
+label = %title:0:75:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -360,7 +324,7 @@ ramp-used-7 = █
 
 [module/wlan]
 type = internal/network
-interface = 
+interface =
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -382,7 +346,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface =
 interval = 3.0
 
 format-connected-underline = #55aa55
