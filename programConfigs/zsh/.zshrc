@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
+alias lip="ifconfig | grep inet | grep 148 | cut --fields=10 --delimiter=' '"
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 
