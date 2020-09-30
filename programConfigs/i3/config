@@ -108,15 +108,18 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 2 toggle # mute sound
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+shift+x exec i3lock --ignore-empty-password --show-failed-attempts --color "$bg-color"
-bindsym Print exec scrot '%d-%m-%Y_%H:%M.png' -e 'mv $f ~/Pictures/scrot/'
-bindsym $mod+Print exec scrot '%d-%m-%Y_%H:%M.png' --focused -e 'mv $f ~/Pictures/scrot/'
+
+bindsym Print exec scrot '%d-%m-%Y_%H:%M.png' -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Desktop screenshot'
+bindsym $mod+Print exec scrot '%d-%m-%Y_%H:%M.png' --focused -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Window screenshot'
 bindsym $mod+d exec rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100
 
 bindsym $mod+n exec $browser
