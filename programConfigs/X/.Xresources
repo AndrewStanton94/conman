@@ -2,6 +2,7 @@
 Xcursor.theme: Breeze-Hacked
 
 ! Font
+urxvt.font: xft:monaco:size=16
 URxvt.font: xft:monaco:size=16
 URxvt.letterSpace: -4
 
@@ -10,7 +11,13 @@ urxvt*depth: 32
 urxvt*background: rgba:6a00/2100/6200/c800
 !*foreground: #ccc
 
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 URxvt*scrollBar: false
+urxvt.perl-ext-common: default,resize-font,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
 
 ! pasted from https://wiki.mpich.org/mpich/index.php/Configure_xterm_Fonts_and_Colors_for_Your_Eyeball
 xterm*vt100*geometry: 80x60
