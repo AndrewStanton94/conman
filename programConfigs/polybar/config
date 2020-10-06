@@ -20,7 +20,7 @@
 background = #6a2162
 background-alt = #9a3b91
 foreground = #ccc
-foreground-alt = #555
+foreground-alt = #eee
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -43,21 +43,19 @@ border-color = #00000000
 
 ; start and end of the bar
 padding-left = 0
-padding-right = 3
+padding-right = 0
 
 ; between modules
-module-margin-left = 1
+module-margin-left = 0
 module-margin-right = 1
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-
 ;font-0 = roboto:pixelsize=13
-font-0 = "Ubuntu Mono Regular:pixelsize=14"
-font-1 = dejavusans:pixelsize=13
-font-2 = fontawesome:pixelsize=13
-font-3 = unifont:pixelsize=13
+font-0 = "FiraCode Nerd Font Mono:pixelsize=14"
+; font-0 = "Ubuntu Mono Regular:pixelsize=14"
+; font-1 = dejavusans:pixelsize=13
+; font-2 = fontawesome:pixelsize=13
+; font-3 = "Font Awesome 5 Free:pixelsize=13"
+; font-4 = unifont:pixelsize=13
 
 modules-left = i3
 modules-center = xwindow
@@ -85,7 +83,7 @@ label = %title:0:75:...%
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
@@ -103,7 +101,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted =  %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -116,17 +114,17 @@ index-sort = true
 label-focused = %icon% %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 3
+label-focused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon% %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 3
+label-visible-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon% %name%
@@ -154,10 +152,11 @@ pin-workspaces = true
 [module/cpu]
 type = internal/cpu
 interval = 2
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 
-label = CPU %percentage:3:3%%
+label = %percentage:3:3%%
 format = <label> <ramp-coreload>
 
 ramp-coreload-0 = ▁
@@ -172,12 +171,12 @@ ramp-coreload-7 = █
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 
 format = <label> <ramp-used>
-label = RAM %gb_used% (%percentage_used%%)
+label = %gb_used% (%percentage_used%%)
 
 ; Only applies if <ramp-used> is used
 ramp-used-0 = ▁
@@ -250,7 +249,7 @@ type = internal/pulseaudio
 sink = alsa_output.pci-0000_00_1b.0.analog-stereo
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = ﰝ %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
