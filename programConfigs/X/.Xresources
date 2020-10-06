@@ -2,9 +2,9 @@
 Xcursor.theme: Breeze-Hacked
 
 ! Font
-urxvt.font: xft:monaco:size=16
-URxvt.font: xft:monaco:size=16
-URxvt.letterSpace: -4
+!https://bbs.archlinux.org/viewtopic.php?id=139831
+URxvt.font: xft:FiraMono Nerd Font Mono:size=16
+URxvt.letterSpace: 0
 
 ! Color
 urxvt*depth: 32
