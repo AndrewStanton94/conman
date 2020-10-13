@@ -203,8 +203,9 @@ exec_always feh --bg-scale ~/conman/backgrounds/lowContrast/nightScene.jpg
 
 # Default workspaces
 assign [class="Firefox"] $workspace1
+for_window [title="YouTube"] move to workspace $workspace7
+for_window [title="Staff Mail"] move to workspace $workspace8
 for_window [title="Messenger|Google Hangouts"] move to workspace $workspace8
-for_window [title="YouTube"] move to workspace $workspace9
 
 for_window [title="Google Drive"] move to workspace $workspace9
 for_window [title="Google Sheets"] move to workspace $workspace9
