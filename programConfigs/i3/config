@@ -126,7 +126,7 @@ bindsym $mod+Down resize grow height 10 px or 10 ppt
 bindsym $mod+Up resize shrink height 10 px or 10 ppt
 bindsym $mod+Right resize grow width 10 px or 10 ppt
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r exec $terminal -e ranger
 	# Run programs
 exec xautolock -time 10 -locker "i3lock --color 6a2162"
 
