@@ -78,19 +78,18 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:75:...%
+label = %title:0:50:...%
+label-empty = ...
 
 [module/xkeyboard]
 type = internal/xkeyboard
+format = <label-indicator>
 blacklist-0 = num lock
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
+label-indicator-padding = 1
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
@@ -114,13 +113,13 @@ index-sort = true
 label-focused = %icon% %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon% %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 2
+label-visible-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
@@ -156,7 +155,7 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 
-label = %percentage:3:3%%
+label = %percentage%%
 format = <label> <ramp-coreload>
 
 ramp-coreload-0 = ▁
