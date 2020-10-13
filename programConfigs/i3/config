@@ -120,6 +120,7 @@ bindsym $mod+shift+x exec i3lock --ignore-empty-password --show-failed-attempts 
 
 bindsym Print exec scrot '%d-%m-%Y_%H:%M.png' -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Desktop screenshot'
 bindsym $mod+Print exec scrot '%d-%m-%Y_%H:%M.png' --focused -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Window screenshot'
+bindsym $mod+shift+Print exec --no-startup-id /home/andrew/scripts/calledShot.sh
 bindsym $mod+d exec rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100
 bindsym $mod+Tab exec rofi -show window
 
