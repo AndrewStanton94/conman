@@ -1,11 +1,15 @@
 	# i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-	#Variables
+#Variables
 set $mod Mod4
+set $run exec --no-startup-id
+set $runAlways exec_always --no-startup-id
 
 set $terminal urxvtcd
 set $browser "brave-browser"
+set $obsidian "/home/andrew/Downloads/Obsidian-0.9.4.AppImage"
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -27,7 +31,7 @@ set $urgent-bg-color     #E53935
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # start a terminal
-bindsym $mod+Return exec $terminal
+bindsym $mod+Return $run $terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -96,34 +100,34 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e $run "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 2 toggle # mute sound
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioRaiseVolume $run pactl set-sink-volume 0 +5% #increase sound volume
+bindsym $mod+F3 $run pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume $run pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym $mod+F2 $run pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute $run pactl set-sink-mute 2 toggle # mute sound
+bindsym XF86AudioPlay $run playerctl play-pause
+bindsym XF86AudioPause $run playerctl play-pause
+bindsym XF86AudioNext $run playerctl next
+bindsym XF86AudioPrev $run playerctl previous
 
-bindsym $mod+F5 exec cmus-remote --prev
-bindsym $mod+F6 exec cmus-remote --pause
-bindsym $mod+F7 exec cmus-remote --next
-bindsym $mod+shift+x exec i3lock --ignore-empty-password --show-failed-attempts --color "$bg-color"
+bindsym $mod+F5 $run cmus-remote --prev
+bindsym $mod+F6 $run cmus-remote --pause
+bindsym $mod+F7 $run cmus-remote --next
+bindsym $mod+shift+x $run i3lock --ignore-empty-password --show-failed-attempts --color "$bg-color"
 
-bindsym Print exec scrot '%d-%m-%Y_%H:%M.png' -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Desktop screenshot'
-bindsym $mod+Print exec scrot '%d-%m-%Y_%H:%M.png' --focused -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Window screenshot'
-bindsym $mod+shift+Print exec --no-startup-id /home/andrew/scripts/calledShot.sh
-bindsym $mod+d exec rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100
-bindsym $mod+Tab exec rofi -show window
-
-bindsym $mod+n exec $browser
+bindsym Print $run scrot '%d-%m-%Y_%H:%M.png' -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Desktop screenshot'
+bindsym $mod+Print $run scrot '%d-%m-%Y_%H:%M.png' --focused -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Window screenshot'
+bindsym $mod+shift+Print $run /home/andrew/scripts/calledShot.sh
+bindsym $mod+d $run rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100
+bindsym $mod+Tab $run rofi -show window
+bindsym $mod+o $run $obsidian
+bindsym $mod+n $run $browser
 
 # Key indicators
-bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Caps_Lock $run pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  $run pkill -SIGRTMIN+11 i3blocks
 
 # resize window
 bindsym $mod+Left resize shrink width 10 px or 10 ppt
@@ -131,7 +135,7 @@ bindsym $mod+Down resize grow height 10 px or 10 ppt
 bindsym $mod+Up resize shrink height 10 px or 10 ppt
 bindsym $mod+Right resize grow width 10 px or 10 ppt
 
-bindsym $mod+r exec $terminal -e ranger
+bindsym $mod+r $run $terminal -e ranger
 
 # Workspaces
 new_window none
@@ -171,27 +175,27 @@ bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+backslash scratchpad show
 bindsym $mod+u [instance="dropdown"] scratchpad show
 
-exec --no-startup-id $terminal -name dropdown -e tmux new -s scratch
+$run $terminal -name dropdown -e tmux new -s scratch
 for_window [instance="dropdown"] border pixel 5
 for_window [instance="dropdown"] move scratchpad
 
 # Run programs
-exec xautolock -time 10 -locker "i3lock --color 6a2162"
+$run xautolock -time 10 -locker "i3lock --color 6a2162"
 # A compositor Adds effects on transitions and transparency
-exec --no-startup-id picom -b
-exec --no-startup-id dropbox start
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+$run picom -b
+$run dropbox start
+$run $HOME/.config/polybar/launch.sh
 
-exec $browser
-exec $terminal
+$run $browser
+$run $terminal
 
 # This keeps the screens in the right layout
 # Install and use arandr to get the command below
-exec_always xrandr --output VGA-0 --mode 1280x1024 --pos 0x56 --rotate normal --output DVI-I-1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off
+$runAlways xrandr --output VGA-0 --mode 1280x1024 --pos 0x56 --rotate normal --output DVI-I-1 --primary --mode 1920x1080 --pos 1280x0 --rotate normal --output DVI-I-0 --off --output HDMI-0 --off
 
-exec_always feh --bg-scale ~/conman/backgrounds/lowContrast/nightScene.jpg
-exec_always numlockx on
+$runAlways feh --bg-scale ~/conman/backgrounds/lowContrast/nightScene.jpg
+$runAlways numlockx on
 
-exec_always --no-startup-id wal -R
-exec_always --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
+$runAlways wal -R
+$runAlways dunst -config $HOME/.config/dunst/dunstrc
 
