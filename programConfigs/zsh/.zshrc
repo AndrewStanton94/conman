@@ -113,5 +113,6 @@ alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sud
 (cat ~/.cache/wal/sequences &)
 
 source ~/scripts/s.sh
+source ~/scripts/ip.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
