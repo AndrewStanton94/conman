@@ -1,3 +1,5 @@
+export PATH=~/.local/bin:$PATH
+
 export EDITOR="vim"
 export TERMINAL="urxvtcd"
 export BROWSER="brave"
