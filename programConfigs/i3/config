@@ -9,6 +9,8 @@ set $runAlways exec_always --no-startup-id
 set $terminal urxvtcd
 set $browser "brave-browser"
 set $obsidian "/home/andrew/Downloads/Obsidian-0.9.4.AppImage"
+set $fileExplorerG "pcmanfm"
+set $fileExplorerT "ranger"
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -124,6 +126,8 @@ bindsym $mod+d $run rofi -combi-modi window#ssh#drun -modi combi -show combi -li
 bindsym $mod+Tab $run rofi -show window
 bindsym $mod+o $run $obsidian
 bindsym $mod+n $run $browser
+bindsym $mod+p $run $fileExplorerG
+bindsym $mod+r $run $terminal -e $fileExplorerT
 
 # Key indicators
 bindsym --release Caps_Lock $run pkill -SIGRTMIN+11 i3blocks
@@ -135,7 +139,6 @@ bindsym $mod+Down resize grow height 10 px or 10 ppt
 bindsym $mod+Up resize shrink height 10 px or 10 ppt
 bindsym $mod+Right resize grow width 10 px or 10 ppt
 
-bindsym $mod+r $run $terminal -e ranger
 
 # Workspaces
 new_window none
