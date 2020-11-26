@@ -1,4 +1,4 @@
-export PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:~/.cargo/bin:$PATH
 
 export EDITOR="vim"
 export TERMINAL="urxvtcd"
