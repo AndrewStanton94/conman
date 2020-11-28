@@ -16,10 +16,7 @@ ZSH_THEME="random"
 # looking in ~/.oh-my-zsh/themes/
 ZSH_THEME_RANDOM_CANDIDATES=(
 	"amuse"
-	"blinks"
 	"bureau"
-	"candy-kingdom"
-	"dallas"
 	"darkblood"
 	"dogenpunk"
 	"dpoggi"
@@ -37,7 +34,6 @@ ZSH_THEME_RANDOM_CANDIDATES=(
 	"rkj"
 	"rkj-repos"
 	"smt"
-	"strug"
 	"trapd00r"
 	"xiong-chiamiov-plus"
 	"ys"
