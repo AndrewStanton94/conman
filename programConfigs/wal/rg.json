@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/andrew/conman/backgrounds/lowContrast/nightScene.jpg",
+    "alpha": "95",
+    "special": {
+        "background": "#0c0406",
+        "foreground": "#cccccc",
+        "cursor": "#aa99ff"
+    },
+    "colors": {
+        "color0": "#0c0406",
+        "color1": "#AB5E90",
+        "color2": "#93B057",
+        "color3": "#CF9172",
+        "color4": "#2D4DA0",
+        "color5": "#6a2162",
+        "color6": "#A814A1",
+        "color7": "#c8c5c2",
+
+        "color8": "#645A5D",
+        "color9": "#bd2c40",
+        "color10": "#00FF00",
+        "color11": "#DDA890",
+        "color12": "#0000FF",
+        "color13": "#9a3b91",
+        "color14": "#B21FD0",
+        "color15": "#dcd7d1"
+    }
+}
