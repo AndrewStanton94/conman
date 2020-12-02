@@ -17,13 +17,13 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color5}
-background-alt = ${xrdb:color13}
-foreground = ${xrdb:foreground}
+background = ${xrdb:color5:#000000}
+background-alt = ${xrdb:color13:#000000}
+foreground = ${xrdb:foreground:#00FF00}
 foreground-alt = #eee
 primary = #ffb52a
 secondary = #e60053
-alert = ${xrdb:color9}
+alert = ${xrdb:color9:#FF0000}
 
 [bar/bar1]
 width = 100%
