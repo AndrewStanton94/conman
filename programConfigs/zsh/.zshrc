@@ -7,6 +7,22 @@ alias theme-="echo $RANDOM_THEME >> ~/.config/zsh/dislikedThemes.txt"
 
 alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
 
+alias dr="cd ~/dr2/"
+alias drk="cd ~/dr2/keys/"
+
+alias d="cd ~/Dropbox"
+alias ss="cd ~/Pictures/scrot/"
+
+alias gs="git status"
+alias gd="git diff"
+alias gp="git push"
+alias ez="$EDITOR ~/.zshrc"
+alias sz="source ~/.zshrc"
+
+alias gpc="globalprotect connect"
+alias gpd="globalprotect disconnect"
+alias gps="globalprotect show --status"
+
 # Load colours from pywal
 (cat ~/.cache/wal/sequences &)
 
