@@ -1,15 +1,12 @@
-export PATH=~/.local/bin:~/.cargo/bin:$PATH
+export PATH=~/.local/bin:~/.cargo/bin:/usr/local/go/bin:/home/andrew/go/bin:$PATH
 
 export EDITOR="vim"
 export TERMINAL="urxvtcd"
-export BROWSER="brave"
+export BROWSER="brave-browser"
 export IMAGE="feh"
 export PAGER="less"
-export WM="i3"
 
-export D="~/Dropbox"
-export TS="~/Dropbox/UoP/timesheets/"
-export W="~/dr2/"
-export P="~/Pictures/"
-export SS="~/Pictures/scrot/"
-
+export OBSIDIAN="/home/andrew/Downloads/Obsidian-0.9.4.AppImage"
+export FILE_EXPLORER_G="pcmanfm"
+export FILE_EXPLORER_T="ranger"
+export TERMINAL="urxvtcd"
