@@ -23,6 +23,8 @@ alias gpc="globalprotect connect"
 alias gpd="globalprotect disconnect"
 alias gps="globalprotect show --status"
 
+alias :q="exit"
+
 # Load colours from pywal
 (cat ~/.cache/wal/sequences &)
 
