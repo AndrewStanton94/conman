@@ -41,6 +41,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'dense-analysis/ale'
+
 " Initialize plugin system
 call plug#end()
 
@@ -147,3 +149,9 @@ function! TrimWhiteSpace()
 endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
 " }}}
+
+let g:ale_fixers = {
+	\ 'javascript': ['prettier'],
+	\ 'css': ['prettier'],
+	\ 'html': ['prettier'],
+	\}
