@@ -23,15 +23,15 @@
   # available, otherwise `xterm-256color` is used.
   #TERM: alacritty
 
-  window:
+window:
   # Window dimensions (changes require restart)
   #
   # Number of lines/columns (not pixels) in the terminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 80
+    lines: 20
 
   # Window position (changes require restart)
   #
@@ -45,12 +45,12 @@
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-    padding:
-      x: 16
-      y: 8
+  padding:
+    x: 16
+    y: 8
 
   # Spread additional padding evenly around the terminal content.
-    dynamic_padding: true
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -106,20 +106,22 @@
   #multiplier: 3
 
 # Font configuration
-  font:
-    size: 14.0
+# Search with `fc-match ${fontname} -s` then use the value in the first set of quotes on the relevant line
+# https://www.behova.net/fonts-in-alacritty/
+font:
+  size: 14.0
   # Normal (roman) font face
-    normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-      family: Hack Nerd Font
+    family: FiraCode NF
 
     # The `style` can be specified to pick a specific face.
-      style: Regular
+    style: Regular
 
   # Bold font face
   bold:
@@ -169,7 +171,7 @@
   #  y: 0
 
 # If `true`, bold text is drawn using the bright color variants.
-  draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
 #colors:
@@ -397,7 +399,7 @@
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  unfocused_hollow: true
+unfocused_hollow: true
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
@@ -718,8 +720,8 @@
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-  key_bindings:
-    - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
