@@ -21,6 +21,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 
 " Web plugins
+Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
 Plug 'othree/javascript-libraries-syntax.vim'
 " Typescript
