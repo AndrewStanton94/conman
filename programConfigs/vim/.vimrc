@@ -81,7 +81,9 @@ hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:_,nbsp:☠
 set list
 
+set path+=**
 set wildmenu                 " visual autocomplete for command menu
+set wildignore+=**/node_modules/**
 set showmatch                " highlight matching brace
 set laststatus=2             " window will always have a status line
 let &colorcolumn="80,".join(range(119,999),",")
@@ -155,4 +157,6 @@ let g:ale_fixers = {
 	\ 'javascript': ['prettier'],
 	\ 'css': ['prettier'],
 	\ 'html': ['prettier'],
+	\ 'markdown': ['prettier'],
 	\}
+
