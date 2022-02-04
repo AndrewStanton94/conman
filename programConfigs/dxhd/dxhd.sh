@@ -13,7 +13,7 @@ $BROWSER &
 
 
 ## Obsidian
-# super + o
+# super + ctrl + o
 $OBSIDIAN &
 
 ## File exporers
@@ -25,3 +25,11 @@ pcmanfm &
 
 # super + shift + x
 i3lock --ignore-empty-password --show-failed-attempts --color "#6a2162"
+
+## Other
+
+# print
+scrot '%d-%m-%Y_%H%M.png' -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Desktop screenshot'
+
+# super + print
+scrot '%d-%m-%Y_%H%M.png' --focused -e 'mv $f ~/Pictures/scrot/' && notify-send --icon /usr/share/icons/breeze-dark/devices/64/video-display.svg 'scrot' 'Window screenshot'
