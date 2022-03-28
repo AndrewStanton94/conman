@@ -158,5 +158,6 @@ let g:ale_fixers = {
 	\ 'css': ['prettier'],
 	\ 'html': ['prettier'],
 	\ 'markdown': ['prettier'],
+	\ 'json': ['prettier'],
 	\}
 
