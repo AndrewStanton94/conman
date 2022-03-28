@@ -60,6 +60,7 @@ setopt CORRECT_ALL
 zstyle ':completion:*' completer _complete _correct _approximate
 
 eval "$(starship init zsh)"
+fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
