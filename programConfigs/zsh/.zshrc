@@ -24,6 +24,9 @@ alias gpc="globalprotect connect"
 alias gpd="globalprotect disconnect"
 alias gps="globalprotect show --status"
 
+alias l="exa --icons --group-directories-first"
+alias ll="exa -l --icons --group-directories-first"
+
 alias :q="exit"
 
 # Load colours from pywal
