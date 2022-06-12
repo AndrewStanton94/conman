@@ -24,8 +24,10 @@ alias gpc="globalprotect connect"
 alias gpd="globalprotect disconnect"
 alias gps="globalprotect show --status"
 
-alias l="exa --icons --group-directories-first"
-alias ll="exa -l --icons --group-directories-first"
+alias  l="exa --icons --group-directories-first"
+alias ll="l --long --header"
+alias la="ll --all"
+alias lt="ll --tree --level=3"
 
 alias :q="exit"
 
