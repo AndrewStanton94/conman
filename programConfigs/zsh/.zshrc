@@ -6,6 +6,7 @@ alias theme+="echo $RANDOM_THEME >> ~/.config/zsh/likedThemes.txt"
 alias theme-="echo $RANDOM_THEME >> ~/.config/zsh/dislikedThemes.txt"
 
 alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
+alias supSnap="sudo snap refresh"
 alias sups="sup && sudo shutdown -h now"
 
 alias dr="cd ~/dr2/"
