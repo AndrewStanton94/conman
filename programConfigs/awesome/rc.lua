@@ -595,10 +595,9 @@ beautiful.useless_gap = 5
 -- Autostart apps
 -- Services
 awful.spawn.with_shell("dropbox start")
--- awful.spawn.with_shell("dunst -config $HOME/.config/dunst/dunstrc")
+awful.spawn.with_shell("dxhd -b")
+awful.spawn.with_shell('copyq popup "CopyQ loaded"')
 -- Appearance
 awful.spawn.with_shell("picom -b")
-awful.spawn.with_shell("feh --bg-scale ~/conman/backgrounds/lowContrast/nightScene.jpg")
-awful.spawn.with_shell("dxhd -b")
 
 awful.util.spawn('teams')
