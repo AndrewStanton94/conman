@@ -1,13 +1,7 @@
 source ~/conman/programConfigs/zsh/aliases
-
-# Load colours from pywal
-(cat ~/.cache/wal/sequences &)
-
-source ~/scripts/s.sh
-source ~/scripts/ip.sh
+source ~/conman/programConfigs/zsh/device/"${HOST}"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 autoload -Uz compinit colors
 colors

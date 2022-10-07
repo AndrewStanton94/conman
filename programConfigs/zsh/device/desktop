@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+alias dr="cd ~/dr2/"
+alias drk="cd ~/dr2/keys/"
+
+alias gpc="globalprotect connect"
+alias gpd="globalprotect disconnect"
+alias gps="globalprotect show --status"
+
+# Load colours from pywal
+(cat ~/.cache/wal/sequences &)
+
+source ~/scripts/s.sh
+source ~/scripts/ip.sh
