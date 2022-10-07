@@ -1,0 +1,39 @@
+#!/bin/zsh
+
+echo "I loaded"
+
+# For a full list of active aliases, run `alias`.
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias theme+="echo $RANDOM_THEME >> ~/.config/zsh/likedThemes.txt"
+alias theme-="echo $RANDOM_THEME >> ~/.config/zsh/dislikedThemes.txt"
+
+alias sup="sudo apt update && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove"
+alias supSnap="sudo snap refresh"
+alias sups="sup && sudo shutdown -h now"
+
+alias dr="cd ~/dr2/"
+alias drk="cd ~/dr2/keys/"
+
+alias d="cd ~/Dropbox"
+alias ss="cd ~/Pictures/scrot/"
+
+alias gs="git status"
+alias gd="git diff"
+alias gp="git push"
+alias ez="$EDITOR ~/.zshrc"
+alias sz="source ~/.zshrc"
+
+alias gpc="globalprotect connect"
+alias gpd="globalprotect disconnect"
+alias gps="globalprotect show --status"
+
+alias  l="exa --icons --group-directories-first"
+alias ll="l --long --header"
+alias la="ll --all"
+alias lt="ll --tree --level=3"
+
+alias :q="exit"
+
+alias bat="batcat"
