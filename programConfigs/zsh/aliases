@@ -21,3 +21,5 @@ alias la="ll --all"
 alias lt="ll --tree --level=3"
 
 alias :q="exit"
+
+alias bat="batcat"
