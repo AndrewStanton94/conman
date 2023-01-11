@@ -8,3 +8,4 @@ export PAGER="moar"
 
 export FILE_EXPLORER_G="pcmanfm"
 export FILE_EXPLORER_T="ranger"
+. "$HOME/.cargo/env"
