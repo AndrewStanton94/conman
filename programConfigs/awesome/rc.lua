@@ -337,7 +337,7 @@ end,
 {description = "restore minimized", group = "client"}),
 
 -- Prompt
-awful.key({ modkey },            "d",     function () awful.util.spawn("rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100") end,
+awful.key({ modkey },            "d",     function () awful.util.spawn("rofi -combi-modi window#ssh#drun -modi combi -show combi -lines 25 -columns 2 -width 100 -show-icons") end,
 {description = "run prompt (rofi)", group = "launcher"}),
 
 awful.key({ modkey }, "x",
