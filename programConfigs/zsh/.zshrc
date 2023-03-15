@@ -1,6 +1,8 @@
 source ~/conman/programConfigs/zsh/aliases
 source ~/conman/programConfigs/zsh/device/"${HOST}"
 
+source ~/conman/scripts/csp.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -Uz compinit colors
