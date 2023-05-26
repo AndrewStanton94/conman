@@ -1,2 +1,8 @@
 #!/bin/zsh
 
+export PATH=/home/andrew/.local/bin:$PATH
+
+alias nvim="~/.local/bin/lvim.AppImage"
+alias v="nvim"
+alias vim="nvim"
+
