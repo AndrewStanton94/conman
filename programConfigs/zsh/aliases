@@ -23,3 +23,7 @@ alias lt="ll --tree --level=3"
 alias :q="exit"
 
 alias bat="batcat"
+
+alias v="~/Downloads/nvim.appimage"
+alias vim="~/Downloads/nvim.appimage"
+alias nvim="~/Downloads/nvim.appimage"
