@@ -24,6 +24,5 @@ alias :q="exit"
 
 alias bat="batcat"
 
-alias v="~/Downloads/nvim.appimage"
-alias vim="~/Downloads/nvim.appimage"
-alias nvim="~/Downloads/nvim.appimage"
+alias v="nvim"
+alias vim="nvim"

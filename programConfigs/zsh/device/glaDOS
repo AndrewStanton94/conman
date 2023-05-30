@@ -12,3 +12,5 @@ alias gps="globalprotect show --status"
 
 source ~/scripts/s.sh
 source ~/scripts/ip.sh
+
+alias nvim="~/Downloads/nvim.appimage"
