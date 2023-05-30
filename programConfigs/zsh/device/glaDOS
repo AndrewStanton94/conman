@@ -14,3 +14,6 @@ source ~/scripts/s.sh
 source ~/scripts/ip.sh
 
 alias nvim="~/Downloads/nvim.appimage"
+
+# Testing this doesn't conflict with other binaries before moving it to a shared file
+export PATH=/home/andrew/.local/bin:$PATH
