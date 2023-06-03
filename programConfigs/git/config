@@ -1,0 +1,9 @@
+[user]
+	email = UPDATE THIS
+	name = Andrew Stanton
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[push]
+	autoSetupRemote = true
