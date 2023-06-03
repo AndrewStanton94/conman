@@ -13,9 +13,12 @@ _comp_options+=(globdots)
 # Report command running time if it is more than 3 seconds
 REPORTTIME=3
 # Keep a lot of history
-HISTFILE=~/.zhistory
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
 HISTSIZE=5000
 SAVEHIST=5000
+
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+
 # Add commands to history as they are entered, don't wait for shell to exit
 setopt INC_APPEND_HISTORY
 # Also remember command start time and duration
